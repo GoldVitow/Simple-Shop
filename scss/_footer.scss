@@ -1,0 +1,53 @@
+.footer {
+   display: flex;
+   align-items: center;
+   height: 50px;
+   &__nav {
+      display: flex;
+   }
+
+   &__item {
+      padding: 14px 40px;
+      border-right: 1px solid black;
+      &:first-child {
+         background-color: #000;
+         color: #fff;
+         &:hover {
+            color: rgba(255, 255, 255, 0.75) !important;
+         }
+      }
+      &:hover {
+         color: rgba(0, 0, 0, 0.75);
+      }
+   }
+
+   &__link {
+      color: inherit;
+      font-size: 22px;
+      line-height: 32px;
+   }
+
+   &__text {
+      margin: 0 auto;
+      font-size: 22px;
+      line-height: 32px;
+   }
+}
+
+body.dark {
+   .footer {
+      &__item {
+         border-right: 1px solid white;
+         &:hover {
+            color: rgba(255, 255, 255, 0.75)
+         }
+         &:first-child {
+            background-color: #fff;
+            color: #000;
+            &:hover {
+               color: rgba(0, 0, 0, 0.75) !important;
+            }
+         }
+      }
+   }
+}

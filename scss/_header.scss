@@ -1,0 +1,120 @@
+.header {
+   display: flex;
+   & > * {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      &:hover {
+         opacity: 0.75;
+      }
+   }
+   & > *:first-child {
+      border-left: 0 !important;
+   }
+   & > *:last-child {
+      border-right: 0 !important;
+   }
+   &__link {
+      padding: 14px 31px 0 32px;
+      font-size: 22px;
+      line-height: 32px;
+   }
+
+   &__header {
+      padding : 9px 38px 5px 47px;
+      font-size: 32px;
+      line-height: 46px;
+      letter-spacing: 0.64em;
+   }
+
+   &__search {
+      padding: 16px 12px 0 12px;
+      position: relative;
+   }
+
+   &__input {
+      width: 333px;
+      height: 29px;
+      background: #E7E7E7;
+      border: 1px solid #000000;
+      border-radius: 48px;
+      text-align: center;
+      font-size: 22px;
+      line-height: 32px;
+   }
+   &__search-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(calc(-50% - 47px), -50%);
+      cursor: text;
+      width: 19px;
+      height: 19px;
+      transition: 0.3s;
+      &.active {
+         opacity: 0;
+      }
+   }
+   &__placeholder {
+      position: absolute;
+      content: 'Search';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 22px;
+      line-height: 32px;
+      text-align: center;
+      color: inherit;
+      transition: 0.5s;
+      &.active {
+         font-size: 16px;
+         line-height: 27px;
+         transform: translate(-50%, calc(-50% + 28px));
+      }
+   }
+
+   &__small-link {
+      padding: 14px 14px 0 14px;
+   }
+
+   &__icon {
+      padding: 5px 14px 0 14px;
+      fill: black;
+      &_one {
+         width: 22px;
+         height: 22px;
+      }
+      &_two {
+         width: 22px;
+         height: 22px;
+      }
+      &_three {
+         width: 25px;
+         height: 22px;
+      }
+      &_four {
+         width: 25px;
+         height: 25px;
+      }
+   }
+}
+
+// Dark theme 
+body.dark {
+   .header {
+      & > * {
+         border-left: 1px solid white;
+         border-right: 1px solid white;
+      }
+      &__input {
+         background-color: #181818;
+      }
+      &__search-icon {
+         fill: white;
+      }
+      &__placeholder {
+      }
+      &__icon {
+         fill: white;
+      }
+   }
+}
